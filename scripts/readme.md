@@ -6,7 +6,7 @@ After cloning the repo run
 * convert_lmdb.sh
 * create_mean.sh
 * download_model.sh
-
+* train.sh
 
 look at this link for guidance.  https://chunml.github.io/ChunML.github.io/project/Training-Your-Own-Data-On-Caffe/
 
