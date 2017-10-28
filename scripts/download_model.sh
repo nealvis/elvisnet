@@ -16,6 +16,6 @@
 
 
 mkdir elvisnet_googlenet
-mv solver.prototxt elvisnet_googlenet/
-mv train_val.prototxt elvisnet_googlenet/
+cp solver.prototxt elvisnet_googlenet/
+cp train_val.prototxt elvisnet_googlenet/
 

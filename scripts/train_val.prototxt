@@ -8,7 +8,7 @@ layer {
     phase: TRAIN
   }
   transform_param {
-    mean_file: "elvisnet_mean.binaryproto"
+    mean_file: "./elvisnet_mean.binaryproto"
     mirror: true
     crop_size: 224
 
@@ -30,7 +30,7 @@ layer {
     phase: TEST
   }
   transform_param {
-    mean_file: "elvisnet_mean.binaryproto"
+    mean_file: "./elvisnet_mean.binaryproto"
     mirror: false
     crop_size: 224
 
@@ -38,7 +38,7 @@ layer {
 
   }
   data_param {
-    source: "./elvisnet_val_lmdb"
+    source: "./elvisnet_test_lmdb"
     batch_size: 50
     backend: LMDB
   }
@@ -916,7 +916,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 1000
+    num_output: 3
     weight_filler {
       type: "xavier"
     }
@@ -1679,7 +1679,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 1000
+    num_output: 3
     weight_filler {
       type: "xavier"
     }
@@ -2392,7 +2392,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 1000
+    num_output: 3
     weight_filler {
       type: "xavier"
     }
