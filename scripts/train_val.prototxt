@@ -17,7 +17,7 @@ layer {
   }
   data_param {
     source: "./elvisnet_train_lmdb"
-    batch_size: 32
+    batch_size: 5
     backend: LMDB
   }
 }
@@ -39,7 +39,7 @@ layer {
   }
   data_param {
     source: "./elvisnet_test_lmdb"
-    batch_size: 50
+    batch_size: 3
     backend: LMDB
   }
 }
