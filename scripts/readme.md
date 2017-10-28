@@ -1,13 +1,21 @@
 # readme for elvisnet scripts
 
-* Clone the repo
-* cd into the scripts diretory
-* if you are using CPU to train modify the solver.prototxt file so that solver_mode is CPU 
 * python3 create_train_test.py
+    creates the test_index.txt and test_index.txt files
+    
 * ./convert_lmdb.sh
+    creates the lmdb for test and training data
+    in elvisnet_test_lmdb and elvisnet_train_lmdb directories
+    
 * ./create_mean.sh
-* ./download_model.sh
-* ./train.sh
+    Creates the elvisnet_mean.binaryproto file with mean values for training data
 
-look at this link for guidance.  https://chunml.github.io/ChunML.github.io/project/Training-Your-Own-Data-On-Caffe/
+* ./download_model.sh
+    creates elvisnet_googlenet directory
+    Copies the solver.prototxt and train_val.prototxt into the new directory
+
+* ./train.sh
+    Trains the model with the images
+
+
 
