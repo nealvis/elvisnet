@@ -1,4 +1,5 @@
 import glob
+from random import shuffle
 
 percent_training = 0.75
 ELVISNET_BASE_DIR = ".."
@@ -14,9 +15,9 @@ def add_category(cat_name, cat_index, train_lines, test_lines) :
     for one_file in all_files :
         counter = counter + 1
         if (counter < (percent_training * total_files)) : 
-            train_lines.append(one_file + " 0\n")
+            train_lines.append(one_file + " " + str(cat_index) + "\n")
         else :
-            test_lines.append(one_file + " 0\n")
+            test_lines.append(one_file + " " + str(cat_index) + "\n")
 
 
 
@@ -27,6 +28,9 @@ add_category("50s", 0, train_lines, test_lines)
 add_category("60s", 1, train_lines, test_lines)
 add_category("70s", 2, train_lines, test_lines)
 
+# shuffle the lists
+shuffle(train_lines)
+shuffle(test_lines)
 
 print("creating train_index.txt")
 train_file = open("train_index.txt", "w")
